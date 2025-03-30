@@ -11,7 +11,7 @@ checks for validating age inputs.
 
 # Define the main function.
 def main():
-    # Get the user's age as a string.
+    # Get the user's entered age as a string.
     age_as_string = input("You want to date our grandchild? How old are you?\n")
 
     # Try to check the validity of the entered age.
