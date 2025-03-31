@@ -8,6 +8,9 @@ from grandparents to date their grandchild. Adds additional
 checks for validating age inputs.
 """
 
+# Import the constants module for age boundaries.
+import constants
+
 
 # Define the main function.
 def main():
@@ -20,11 +23,11 @@ def main():
         age = int(age_as_string)
 
         # Check if the user is older than 25 and younger than 40.
-        if (age > 25) and (age < 40):
+        if (age > constants.MIN_AGE_EXPECT) and (age < constants.MAX_AGE_EXPECT):
             # Display the user is approved of dating the grandchild.
             print("\nYou are approved of dating our grandchild.")
         # Also, check if the user enters an invalid age not between 0 and 120.
-        elif (age < 0) or (age > 120):
+        elif (age < constants.MIN_POSSIBLE_AGE) or (age > constants.MAX_POSSIBLE_AGE):
             # Display the user needs to enter a valid age.
             print("\nPlease enter a valid age.")
         # Otherwise, they are too young or too old for expectations.
